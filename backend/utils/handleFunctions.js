@@ -1,5 +1,5 @@
 export const handleError = (res, e) => {
-    return res.status(500).json(+e)
+    return res.status(500).json(e)
 }
 
 export const handleResponse = (req, res, todo) => {
