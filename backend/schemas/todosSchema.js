@@ -2,7 +2,16 @@ import mongoose from 'mongoose'
 
 export const todoSchema = new mongoose.Schema(
     {
-        todo: String,
+        todo: {
+            type: String,
+            required: true,
+            minlength: 3,
+            trim: true,
+        },
+        checked: {
+            type: Boolean,
+            required: true,
+        },
     },
     {
         collection: 'todos',
