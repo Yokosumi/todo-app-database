@@ -1,0 +1,22 @@
+@url = http://localhost:3075
+@id = 65ccadfadc1845bc047581e2
+
+### GET ALL TODOS
+GET {{url}}/todos
+
+### SEND SINGLE TODO
+POST {{url}}/todos
+content-type: application/json
+
+{
+    "body": "clean your room",
+    "checked": false,
+    "badges": ["Urgent, Necessary"]
+}
+
+
+### DELETE ONE SPECIFIC TODO
+DELETE {{url}}/todos/{{id}}
+
+### CLEAR ALL TODOS
+DELETE {{url}}/todos
